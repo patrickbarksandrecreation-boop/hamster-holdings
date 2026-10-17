@@ -1,0 +1,162 @@
+{
+  "manifest_version": 1,
+  "template_id": "HH-HAM-SYRIAN-01",
+  "species_id": "syrian",
+  "frame_size_px": {
+    "width": 64,
+    "height": 48
+  },
+  "foot_anchor_px": {
+    "x": 32,
+    "y": 42
+  },
+  "reference_facing": "right",
+  "asset_filter": "nearest",
+  "art_grid_px": 16,
+  "render_layers_bottom_to_top": [
+    "rear_limbs",
+    "body",
+    "coat_markings",
+    "face_and_ears",
+    "front_paws",
+    "accessories"
+  ],
+  "animations": [
+    {
+      "id": "idle",
+      "frames": 4,
+      "fps": 4,
+      "loop": true,
+      "sprint": 1
+    },
+    {
+      "id": "walk",
+      "frames": 6,
+      "fps": 10,
+      "loop": true,
+      "sprint": 2
+    },
+    {
+      "id": "wheel_run",
+      "frames": 8,
+      "fps": 12,
+      "min_fps": 8,
+      "max_fps": 16,
+      "loop": true,
+      "sprint": 1
+    },
+    {
+      "id": "rest",
+      "frames": 4,
+      "fps": 3,
+      "loop": true,
+      "sprint": 1
+    },
+    {
+      "id": "groom",
+      "frames": 6,
+      "fps": 8,
+      "loop": false,
+      "sprint": 2
+    },
+    {
+      "id": "operate",
+      "frames": 6,
+      "fps": 8,
+      "loop": true,
+      "sprint": 2
+    },
+    {
+      "id": "inspect",
+      "frames": 4,
+      "fps": 5,
+      "loop": false,
+      "sprint": 3
+    },
+    {
+      "id": "celebrate",
+      "frames": 6,
+      "fps": 10,
+      "loop": false,
+      "sprint": 3
+    }
+  ],
+  "phenotype_mapping_v1": {
+    "note": "Synthetic renderer test alleles only, not asserted biological genetics.",
+    "pigment": {
+      "locus": "pigment",
+      "dominant": "G",
+      "recessive": "g",
+      "dominant_phenotype": "golden",
+      "homozygous_recessive_phenotype": "cream"
+    },
+    "marking": {
+      "locus": "marking",
+      "dominant": "M",
+      "recessive": "m",
+      "dominant_phenotype": "solid",
+      "homozygous_recessive_phenotype": "symmetric_band"
+    }
+  },
+  "fixture_hamsters": [
+    {
+      "id": "biscuit",
+      "name": "Biscuit",
+      "pigment": [
+        "G",
+        "g"
+      ],
+      "marking": [
+        "M",
+        "m"
+      ],
+      "phenotype": {
+        "coat": "golden",
+        "markings": "solid"
+      }
+    },
+    {
+      "id": "mochi",
+      "name": "Mochi",
+      "pigment": [
+        "g",
+        "g"
+      ],
+      "marking": [
+        "M",
+        "m"
+      ],
+      "phenotype": {
+        "coat": "cream",
+        "markings": "solid"
+      }
+    },
+    {
+      "id": "pip",
+      "name": "Pip",
+      "pigment": [
+        "G",
+        "g"
+      ],
+      "marking": [
+        "m",
+        "m"
+      ],
+      "phenotype": {
+        "coat": "golden",
+        "markings": "symmetric_band"
+      }
+    }
+  ],
+  "wheel_animation": {
+    "frame_size_px": {
+      "width": 96,
+      "height": 96
+    },
+    "frames": 8,
+    "nominal_fps": 12,
+    "loop": true,
+    "phase_driven_by_simulation": true,
+    "atlas_layout": "horizontal"
+  }
+}
